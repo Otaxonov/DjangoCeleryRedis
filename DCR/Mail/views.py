@@ -14,7 +14,7 @@ def IndexView(request):
             message = form.cleaned_data['message']
 
             SendMailTask.delay(email, message)
-            messages.success(request, 'Your mail has been sent successfuly')
+            messages.success(request, 'Your message has been sent successfuly')
 
     form = SendMailForm()
 
